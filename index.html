@@ -30,21 +30,23 @@
 				</ul>
 			</nav>
 			<section>
-				<h2>Поиск</h2>	
-				<p>
-					<a href="#">Поиск</a>
-					<input type="search" placeholder="Крем-брюле">
-				</p>
+        <h2>Поиск</h2>
+        <form action="https://echo.htmlacademy.ru" method="GET">	
+          <p>
+            <a href="#">Поиск</a>
+            <input type="search" name="site-search" placeholder="Крем-брюле">
+          </p>
+        </form>
 			</section>
 			<section>
 				<h2>Личный кабинет</h2>
 					<a href="#">Вход</a>
 					<form action="https://echo.htmlacademy.ru" method="GET">
 						<p>
-							<input type="email" placeholder="email@example.com">
+							<input type="email" name="login-email" placeholder="email@example.com" >
 						</p>
 						<p>
-							<input type="password" placeholder="......">
+							<input type="password" name="login-password" placeholder="......">
 						</p>
 						<p>	
 							<button type="submit">Войти</button>
@@ -67,17 +69,19 @@
 			<section>
 				<h2>Закажите два вида мороженого: это выгодно</h2>
 				<ul>
-					<li>					
-						Крем-брюле и пломбир с малиновым джемом
+					<li>            					
+            <p>Крем-брюле и пломбир с малиновым джемом</p>
+            <a href="#">Давайте оба!</a>
 					</li>				
 					<li>					
-						Шоколадный пломбир и лимонный сорбет
+            <p>Шоколадный пломбир и лимонный сорбет</p>
+            <a href="#">Давайте оба!</a>
 					</li>				
 					<li>					
-						Пломбир с помадкой и клубничный щербет
+            <p>Пломбир с помадкой и клубничный щербет</p> 
+            <a href="#">Давайте оба!</a>
 					</li>				
-				</ul>
-				<button type="button">Давайте оба!</button>
+				</ul>				
 			</section>
 			<section>
 				<h2>Наши акции</h2>
@@ -98,36 +102,32 @@
 				<h2>Лидеры продаж</h2>
 				<ul>
 					<li>
-						<figure>
-							<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
-							<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочное с апельсиновым джемом">
-							<p>310 ₽<span>/кг</span></p>
-							<figcaption>Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
-						</figure>	
+            <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+						<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
+						<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочное с апельсиновым джемом">
+            <p>310 ₽<span>/кг</span></p>
+            <a href="#">Быстрый просмотр</a>							
 					</li>
 					<li>
-						<figure>
-							<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
-							<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочно-кофейное">
-							<p>380 ₽<span>/кг</span></p>
-							<figcaption>Сливочно-кофейное с кусочками шоколада</figcaption>	
-						</figure>
+            <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+						<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
+						<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочно-кофейное">
+            <p>380 ₽<span>/кг</span></p>
+            <a href="#">Быстрый просмотр</a>							
 					</li>
 					<li>
-						<figure>
-							<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
-							<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочно-клубничное">
-							<p>355 ₽<span>/кг</span></p>
-							<figcaption>Сливочно-клубничное с присыпкой из белого шоколада</figcaption>	
-						</figure>
+            <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+						<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
+						<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочно-клубничное">
+            <p>355 ₽<span>/кг</span></p>
+            <a href="#">Быстрый просмотр</a>							
 					</li>
 					<li>
-						<figure>
-							<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
-							<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочное крем-брюле">
-							<p>415 ₽<span>/кг</span></p>
-							<figcaption>Сливочное крем-брюле с карамельной подливкой </figcaption>	
-						</figure>	
+            <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+						<img src="https://dummyimage.com/61.jpg/849d8f&text=hit" alt="Значок Хит продаж">
+						<img src="https://dummyimage.com/267.jpg/849d8f&text=icecream" alt="Фото мороженного: сливочное крем-брюле">
+            <p>415 ₽<span>/кг</span></p>
+            <a href="#">Быстрый просмотр</a>							
 					</li>
 				</ul>
 			</section>
@@ -136,19 +136,15 @@
 				<p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 				<ul>
 					<li>
-						<img src="https://dummyimage.com/49.jpg/849d8f&text=icon" width="49" height="49" alt="Иконка с мороженым">
 						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 					</li>
 					<li>
-						<img src="https://dummyimage.com/49.jpg/849d8f&text=icon" width="49" height="49" alt="Иконка с листиком">
 						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 					</li>
-					<li>
-						<img src="https://dummyimage.com/49.jpg/849d8f&text=icon" width="49" height="49" alt="Иконка с коровой">
+					<li>						
 						<p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 					</li>
-					<li>
-						<img src="https://dummyimage.com/49.jpg/849d8f&text=icon" width="49" height="49" alt="Иконка с термометром">
+					<li>						
 						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 					</li>
 				</ul>
@@ -156,14 +152,14 @@
 			<article>
 				<h2>Наш блог</h2>
 				<p>Новое в нашем блоге</p>
-				<h3>10 способов сервировки фруктовых щербетов к столу</h3>
+				<h3><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
 			</article>
 			<section>
 				<h2>Подписаться на рассылку</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 				<form action="https://echo.htmlacademy.ru" method="GET">
 				<p>
-					<input type="email" placeholder="email@example.com">
+					<input type="email" name="subscription-email" placeholder="email@example.com">
 					<button type="submit">Отправить</button>
 				</p>
 				</form>
@@ -178,7 +174,7 @@
 				<a href="tel:+78124502525">8 812 450-25-25</a>
 				(с 10 до 20 ежедневно)
 				</p>
-				<button type="button">Форма обратной связи</button>
+				<a href="#">Форма обратной связи</a>
 			</section>
 		</main>
 		<footer>
