@@ -57,7 +57,41 @@
 			</section>
 			<section>
         <h2>Корзина</h2>
-				<a href="#">Корзина</a>
+        <a href="#">Корзина</a>
+        <form method="GET" action="https://echo.htmlacademy.ru">
+          <table>
+            <caption>Ваш заказ</caption>
+            <tr>
+              <th>Кнопка удаления товара</th>
+              <th>Изображение товара</th>
+              <th>Наименование товара</th>
+              <th>Вес товара</th>
+              <th>Цена за килограмм</th>
+              <th>Цена товара в заказе</th>
+            </tr>
+            <tr>
+              <td><button type="button">Удалить из корзины</button></td>
+              <td><img src="https://dummyimage.com/33.jpg/849d8f&text=cart" alt="Фото мороженого: пломбир с апельсиновым джемом"></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг</td>
+              <td>200 руб.</td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td><button type="button">Удалить из корзины</button></td>
+              <td><img src="https://dummyimage.com/33.jpg/849d8f&text=cart" alt="Фото мороженого: клубничный пломбир"></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг</td>
+              <td>300 руб.</td>
+              <td>450 руб.</td>
+            </tr>
+            <tr>
+              <td colspan="5">Итого:</td>
+              <td>750 руб.</td>
+            </tr>
+          </table>
+          <button type="submit">Оформить заказ</button>
+        </form>
 			</section>
 			<p>
 				с 10 до 20, ежедневно
@@ -82,7 +116,7 @@
         <form method="GET" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Сортировка:</legend>
-            <select>
+            <select name="group-sorting">
               <option value="popularity">по популярности</option>
               <option value="price-up">сначала недорогие</option>
               <option value="price-down">сначала дорогие</option>
@@ -221,6 +255,9 @@
         </ul>
         <ul>
           <li>
+            <a>&lt;</a>
+          </li>
+          <li>
             <a>1</a>
           </li>
           <li>
@@ -234,6 +271,9 @@
           </li>
           <li>
             <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#">&gt;</a>
           </li>
         </ul>
       </section>
@@ -283,42 +323,5 @@
 				</p>
 			</section>
     </footer>
-    <section>
-      <h2>Корзина</h2>
-      <form method="GET" action="https://echo.htmlacademy.ru">
-        <table>
-          <caption>Ваш заказ</caption>
-          <tr>
-            <th>Кнопка удаления товара</th>
-            <th>Изображение товара</th>
-            <th>Наименование товара</th>
-            <th>Вес товара</th>
-            <th>Цена за килограмм</th>
-            <th>Цена товара в заказе</th>
-          </tr>
-          <tr>
-            <td><button type="button">Удалить из корзины</button></td>
-            <td><img src="https://dummyimage.com/33.jpg/849d8f&text=cart" alt="Фото мороженого: пломбир с апельсиновым джемом"></td>
-            <td>Пломбир с апельсиновым джемом</td>
-            <td>1,5 кг</td>
-            <td>200 руб.</td>
-            <td>300 руб.</td>
-          </tr>
-          <tr>
-            <td><button type="button">Удалить из корзины</button></td>
-            <td><img src="https://dummyimage.com/33.jpg/849d8f&text=cart" alt="Фото мороженого: клубничный пломбир"></td>
-            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-            <td>1,5 кг</td>
-            <td>300 руб.</td>
-            <td>450 руб.</td>
-          </tr>
-          <tr>
-            <th colspan="5">Итого:</th>
-            <th>750 руб.</th>
-          </tr>
-        </table>
-        <button type="submit">Оформить заказ</button>
-      </form>
-    </section>
   </body>
 </html>
