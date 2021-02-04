@@ -688,6 +688,8 @@ img {
 /* Pagination */
 
 .pagination-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   line-height: 18px;
   font-weight: 500;
