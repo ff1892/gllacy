@@ -532,12 +532,14 @@ img {
   color: var(--basic-dark);
   background-color: #F2E7CE;
   border-radius: 16px;
+  padding: 24px 23px 36px 20px;
 }
 
 .features-lead {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
 }
 
 .features-list {
@@ -563,6 +565,7 @@ img {
   color: var(--basic-dark);
   background-color: #F4E7EB;
   border-radius: 16px;
+  padding: 23px 250px 0 20px;
 }
 
 .blog-article p {
