@@ -119,15 +119,21 @@ img {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 27px;
 }
 
 .button {
@@ -173,7 +179,7 @@ img {
 .input[type="email"],
 .input[type="password"],
 .input[type="search"] {
-  font:inherit;
+  font: inherit;
   line-height: 20px;
   border: 1px solid var(--special-dark);
   border-radius: 4px;
@@ -210,7 +216,7 @@ img {
 
 .main-header-logo {
   width: 154px;
-  height: 54 px;
+  height: 54px;
   margin-right: 10px;
 }
 
@@ -221,6 +227,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 600px;
 }
 
 .site-navigation li {
@@ -475,12 +482,16 @@ img {
   row-gap: 20px;
 }
 
+.page-catalog {
+  margin-bottom: 80px;
+}
+
 .catalog-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .catalog-item:hover {
@@ -494,6 +505,7 @@ img {
   line-height: 22px;
   text-align: center;
   order: 3;
+  flex-grow: 1;
 }
 
 .item-pic {
@@ -610,6 +622,7 @@ img {
 .input-subscription {
   flex-grow: 1;
   margin-right: 10px;
+  line-height: 24px;
 }
 
 
@@ -629,7 +642,7 @@ img {
 }
 
 .contacts-container {
-  height: 430px;
+  height: 100%;
   display: flex;
 }
 
@@ -662,6 +675,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 .page-footer {
@@ -736,7 +750,9 @@ img {
   display: flex;
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 9px;
 }
+
 
 .breadcrumbs a {
   color: var(--basic-white);
@@ -753,17 +769,26 @@ img {
 .catalog-title {
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 /* Filter */
 
 .filter {
   font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  outline: 2px solid greenyellow;
 }
 
 .filter ul {
   list-style: none;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 .filter legend {
@@ -773,9 +798,12 @@ img {
 }
 
 .filter fieldset {
+  border: none;
+}
+
+.filter-wrapper {
   background-color: var(--basic-white-dimmed);
   border-radius: 20px;
-  border: none;
 }
 
 .filter-select {
@@ -787,6 +815,12 @@ img {
 
 .filter-select:hover {
   color: var(--basic-dark);
+}
+
+.filter-radio,
+.filter-checkbox {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-button {
