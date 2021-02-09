@@ -779,9 +779,9 @@ img {
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  margin-bottom: 40px;
-  outline: 2px solid greenyellow;
+  margin-bottom: 26px;
+  width: 869px;
+  justify-content: space-between;
 }
 
 .filter ul {
@@ -795,10 +795,13 @@ img {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  margin-bottom: 7px;
 }
 
 .filter fieldset {
   border: none;
+  padding: 0;
+  margin-bottom: 14px;
 }
 
 .filter-wrapper {
@@ -817,7 +820,11 @@ img {
   color: var(--basic-dark);
 }
 
-.filter-radio,
+.filter-radio {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter-checkbox {
   display: flex;
   justify-content: space-between;
@@ -832,6 +839,8 @@ img {
   border: 2px solid var(--basic-white);
   text-align: center;
   border-radius: 20px;
+  align-self: flex-end;
+  margin-bottom: 14px;
 }
 
 .filter-button:hover,
