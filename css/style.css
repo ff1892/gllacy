@@ -322,11 +322,11 @@ img {
   background-color: var(--basic-neutral);
   border-radius: 4px;
   list-style: none;
-  padding-top: 4px;
+	padding-top: 4px;
   padding-bottom: 4px;
   position: absolute;
-  top: 35px;
-  left: 0;
+  top: 33px;
+  left: -7px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -337,13 +337,17 @@ img {
 }
 
 .catalog-navigation li {
-  padding: 7px 21px 7px 20px;
+  padding: 5px 21px 5px 20px;
 }
 
 .catalog-navigation li:first-child {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 8px;
   position: relative;
+}
+
+.catalog-navigation li:nth-child(2) {
+	padding-top: 7px;
 }
 
 .catalog-navigation li:first-child::after {
@@ -741,12 +745,13 @@ img {
   position: relative;
 }
 
-.catalog-item::before {
+.catalog-item:before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 125%;
+  width: 293px;
+  height: calc(100% + 76px);
   border-radius: 4px;
+  top: -6px;
   background-color: var(--basic-white-dimmed);
   visibility: hidden;
 }
@@ -862,7 +867,7 @@ img {
 .features-item::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 3px;
   left: 0;
   width: 49px;
   height: 49px;
@@ -903,11 +908,16 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  padding: 15px 250px 0 20px;
+  padding: 18px 250px 0 20px;
 }
 
 .blog-article p {
   font-weight: 500;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.blog-article h3 {
   margin: 0;
 }
 
@@ -981,7 +991,7 @@ img {
   width: 303px;
   margin-left: auto;
   align-self: center;
-  padding: 30px 25px 40px;
+  padding: 30px 25px 30px;
 }
 
 .contacts-info {
@@ -989,11 +999,15 @@ img {
   padding: 0;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .contacts-info p {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 }
 
 .contacts-address,
@@ -1008,7 +1022,11 @@ img {
 }
 
 .contacts .button {
+  display: block;
   padding: 10px 18px;
+  margin-top: 12px;
+  align-self: stretch;
+
 }
 
 /* FOOTER */
@@ -1037,7 +1055,8 @@ img {
 
 .social-list .social-button {
   display: block;
-  margin-right: 12px;
+  margin-top: 5px;
+  margin-right: 8px;
   box-sizing: content-box;
   width: 32px;
   height: 32px;
@@ -1062,11 +1081,12 @@ img {
 .docs-list {
 	list-style: none;
   margin: 0;
+  margin-top: 7px;
   padding: 0;
   display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 18px;
-  justify-self: center;
+  grid-template-columns: 1fr auto;
+  column-gap: 32px;
+  margin-left: 15px;
 }
 
 .docs-important {
