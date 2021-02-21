@@ -38,10 +38,12 @@
   --basic-white: #FFFFFF;
   --basic-white-dimmed: rgba(255, 255, 255, 0.2);
   --basic-white-half: rgba(255, 255, 255, 0.5);
+  --basic-white-40: rgba(255, 255, 255, 0.4);
   --basic-white-70: rgba(255, 255, 255, 0.7);
   --basic-white-80: rgba(255, 255, 255, 0.8);
 
   --basic-neutral: #F8F7F4;
+  --basic-neutral-50: rgba(248,247,244,0.5);
   --basic-dark: #323232;
   --basic-dark-20: rgba(50, 50, 50, 0.2);
   --basic-dark-dimmed: #5A5A5A;
@@ -237,6 +239,7 @@ img {
 
 .main-header {
   margin-top: 10px;
+  position: relative;
 }
 
 /* Navigation */
@@ -272,11 +275,11 @@ img {
   line-height: 18px;
   font-weight: 700;
   color: var(--basic-white);
-  padding: 6px 13px 9px 13px;
+  padding: 4px 13px 6px 13px;
   border-radius: 26px;
 }
 
-.site-nav-link span {
+.site-nav-link:not(.current) span {
   border-bottom: 1px solid var(--basic-white-dimmed);
 }
 
@@ -294,6 +297,7 @@ img {
 
 .site-nav-link.current {
   background-color: var(--accent-light);
+  padding: 2px 14px 8px;
 }
 
 /* Catalog Navigation */
@@ -551,8 +555,24 @@ img {
 
 /* Cart */
 
+.cart {
+  position: relative;
+}
+
 .form-cart {
-  display: none;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 539px;
+  padding: 13px 14px 19px 15px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.cart:hover .form-cart {
+  visibility: visible;
 }
 
 .cart-with-items {
@@ -560,13 +580,37 @@ img {
   color: var(--basic-dark);
 }
 
+.cart-with-items::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: -10px;
+  left: 0;
+}
+
 .table-cart {
   font-size: 13px;
   line-height: 16px;
+  margin-bottom: 15px;
+}
+
+.cart-item td{
+  padding-bottom: 14px;
+  vertical-align: top;
+  padding-top: 11px;
 }
 
 .table-cart img {
   border-radius: 50%;
+}
+
+.cart-item .item-thumb {
+  padding-top: 0;
+}
+
+.cart-item td:nth-child(3) {
+  width: 230px;
 }
 
 .price-kilo {
@@ -577,10 +621,31 @@ img {
   text-align: right;
 }
 
-.cart-total {
+.cart-total td {
+  border-top: 1px solid var(--special-neutral);
+  padding-top: 16px;
   font-size: 15px;
   font-weight: 700;
   text-align: right;
+}
+
+.cart-button {
+  padding: 9px 16px 10px;
+  align-self: flex-end;
+}
+
+.cart-button:active {
+  outline: 0;
+}
+
+.button-delete {
+  width: 11px;
+  height: 11px;
+  background: url(../img/icon/delete_button.svg) no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
 }
 
 /* Open */
@@ -594,6 +659,12 @@ img {
   text-align: right;
 }
 
+.open-time.page {
+  position: absolute;
+  right: 27px;
+  top: 53px
+}
+
 .open-time a {
   display: block;
   margin-top: 10px;
@@ -603,6 +674,10 @@ img {
 }
 
 /* MAIN */
+
+.main-page {
+  margin-top: 34px;
+}
 
 .main-index-container {
   display: grid;
@@ -665,6 +740,15 @@ img {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls button:hover {
+  background-color: var(--basic-white-40);
+}
+
+.slider-controls button:active {
+  background-color: var(--basic-white);
+  outline: 0;
 }
 
 .slider-controls .current {
@@ -735,11 +819,11 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 26px;
-  row-gap: 20px;
+  row-gap: 38px;
 }
 
 .page-catalog {
-  margin-bottom: 80px;
+  margin-bottom: 74px;
 }
 
 .catalog-item {
@@ -755,7 +839,7 @@ img {
   position: relative;
 }
 
-.catalog-item:before {
+.catalog-item::before {
   content: "";
   position: absolute;
   width: 293px;
@@ -764,6 +848,7 @@ img {
   top: -6px;
   background-color: var(--basic-white-dimmed);
   visibility: hidden;
+  z-index: 1;
 }
 
 .catalog-item:hover:before {
@@ -779,6 +864,7 @@ img {
   text-align: center;
   order: 2;
   flex-grow: 1;
+  z-index: 2;
 }
 
 .item-pic {
@@ -830,10 +916,15 @@ img {
   order: 3;
   padding: 10px 16px;
   visibility: hidden;
+  z-index: 1;
 }
 
 .catalog-item:hover .quick-view {
   visibility: visible;
+}
+
+.catalog-item:hover .item-image-price {
+  z-index: 2;
 }
 
 /* Features */
@@ -979,12 +1070,9 @@ img {
   line-height: 24px;
 }
 
-
-
 /* Contacts */
 
 .map {
-  height: 430px;
   margin-bottom: 18px;
   background-image: url(../img/background/map_and_pin.png);
   background-repeat: no-repeat;
@@ -1002,6 +1090,8 @@ img {
   margin-left: auto;
   align-self: center;
   padding: 30px 25px 30px;
+  margin-top: 62px;
+  margin-bottom: 62px;
 }
 
 .contacts-info {
@@ -1115,8 +1205,6 @@ img {
   left: -22px;
 }
 
-
-
 .docs-link {
   color: var(--basic-white);
   font-size: 13px;
@@ -1175,7 +1263,6 @@ img {
   flex-wrap: wrap;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 9px;
 }
 
 .breadcrumbs li {
@@ -1230,8 +1317,8 @@ img {
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 26px;
-  /* width: 869px; */
 }
 
 .filter ul {
@@ -1246,17 +1333,19 @@ img {
   line-height: 16px;
   font-weight: 500;
   margin-bottom: 7px;
+  padding-left: 15px;
 }
 
 .filter fieldset {
   border: none;
   padding: 0;
-  margin-bottom: 14px;
-  margin-right: 15px;
+  margin-bottom: 12px;
+  margin-right: 12px;
 }
 
 .filter-wrapper {
   background-color: var(--basic-white-dimmed);
+  min-height: 36px;
   border-radius: 20px;
 }
 
@@ -1282,14 +1371,75 @@ img {
   background-color: var(--basic-white);
 }
 
+/* filter: price */
+
+.range-controls {
+  position: relative ;
+  width: 218px;
+  padding-top: 17px;
+  padding-right: 21px;
+  padding-left: 21px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--basic-neutral-50);
+}
+
+.range-controls .bar {
+  height: 2px;
+  width: 60%;
+  margin-left: 20px;
+  background-color: var(--basic-neutral);
+}
+
+.range-controls .toggle {
+  box-sizing: content-box;
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--special-neutral-dark);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 34px;
+}
+
+.range-controls .toggle-max {
+  left: 132px;
+}
+
+.input-price {
+  margin: 0;
+  padding: 0;
+  margin-left: 2px;
+  width: 30px;
+  font-family: inherit;
+  color: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
 /* filter: radio */
 
 .radio .filter-wrapper {
-  padding: 7px 17px 7px 47px;
+  padding: 9px 17px 7px 47px;
 }
 
 .filter-radio {
   display: flex;
+  justify-content: space-between;
 }
 
 .filter-radio li {
@@ -1332,7 +1482,8 @@ img {
 /* filter: checkbox */
 
 .checkbox .filter-wrapper {
-  padding: 8px 19px 8px 48px;
+  padding: 8px 25px 8px 45px;
+  margin-top: 3px;
 }
 
 .filter-checkbox {
@@ -1381,6 +1532,7 @@ img {
 /* filter: button */
 
 .filter-button {
+  padding: 6px 28px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1408,39 +1560,46 @@ img {
 
 .pagination-list {
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
+  margin-bottom: 29px;
   list-style: none;
   line-height: 18px;
   font-weight: 500;
   color: inherit;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 
-.pagination-list li {
-  margin-left: 20px;
+.pagination-item {
+  margin-left: 4px;
 }
 
 .pagination-list .previous {
-  padding-right: 4px;
+  margin-right: 12px;
 }
 
 .pagination-list .next {
-  padding-left: 6px;
+  margin-left: 18px;
 }
 
-
-.pagination-item {
+.pagination-link {
+  display: block;
   color: var(--basic-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: 50%;
 }
 
-.pagination-item:hover {
+.pagination-link:hover {
   background-color: var(--basic-white-dimmed);
 }
 
-.pagination-item.current,
-.pagination-item:active {
+.pagination-link.current,
+.pagination-link:active {
   color: var(--basic-dark);
   background-color: var(--basic-white);
 }
@@ -1449,6 +1608,10 @@ img {
   color: inherit;
 }
 
-.pagination-icon.disabled {
-  color: var(--basic-white-dimmed);
+.pagination-icon.previous {
+  transform: rotate(180deg);
+}
+
+.pagination-icon.disabled path{
+  fill-opacity: 0.2;
 }
