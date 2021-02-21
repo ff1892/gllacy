@@ -1352,23 +1352,31 @@ img {
 /* filter: select */
 
 .filter-select {
-  width: 196px;
+  height: 100%;
   color: inherit;
   background-color: transparent;
   font: inherit;
   border-radius: 20px;
   border: none;
-  padding: 3px 14px 5px 16px;
+  padding: 6px 6px 5px 14px;
+  appearance: none;
 }
 
-.filter-select:hover {
+.wrapper-select svg {
+  margin-right: 15px;
+}
+
+.wrapper-select:hover .filter-select {
   color: var(--basic-dark);
+}
+
+.wrapper-select:hover path {
+  fill: var(--basic-dark);
 }
 
 .filter-select:focus {
-  outline: transparent;
-  color: var(--basic-dark);
-  background-color: var(--basic-white);
+  outline: 0;
+  background-color: transparent;
 }
 
 /* filter: price */
