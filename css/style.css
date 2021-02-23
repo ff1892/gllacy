@@ -1453,7 +1453,7 @@ img {
 /* filter: radio */
 
 .radio .filter-wrapper {
-  padding: 9px 17px 0 47px;
+  padding: 9px 17px 0 15px;
 }
 
 .filter-radio {
@@ -1462,7 +1462,8 @@ img {
 }
 
 .filter-radio li {
-  margin-right: 52px;
+  margin-right: 19px;
+  padding-left: 33px;
   margin-bottom: 7px;
 }
 
@@ -1502,17 +1503,19 @@ img {
 /* filter: checkbox */
 
 .checkbox .filter-wrapper {
-  padding: 8px 25px 0 45px;
+  padding: 8px 25px 0 14px;
   margin-top: 3px;
 }
 
 .filter-checkbox {
   display: flex;
   flex-wrap: wrap;
+  max-width: 810px;
 }
 
 .filter-checkbox li {
-  margin-right: 54px;
+  margin-right: 23px;
+  padding-left: 31px;
   margin-bottom: 8px;
 }
 
