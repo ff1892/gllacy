@@ -319,7 +319,8 @@ img {
   bottom: -20px;
 }
 
-.catalog-link:hover .catalog-navigation {
+.catalog-link:hover .catalog-navigation,
+.catalog-link:focus-within .catalog-navigation {
   visibility: visible;
 }
 
@@ -480,7 +481,8 @@ img {
   z-index: 8;
 }
 
-.search:hover .form-search {
+.search:hover .form-search,
+.search:focus-within .form-search {
   visibility: visible;
 }
 
@@ -518,7 +520,8 @@ img {
   width: 241px;
 }
 
-.login:hover .form-login{
+.login:hover .form-login,
+.login:focus-within .form-login {
   visibility: visible;
 }
 
@@ -862,7 +865,8 @@ img {
   z-index: 1;
 }
 
-.catalog-item:hover:before {
+.catalog-item:hover:before,
+.catalog-item:focus-within:before {
   visibility: visible;
 }
 
@@ -933,11 +937,13 @@ img {
   z-index: 1;
 }
 
-.catalog-item:hover .quick-view {
+.catalog-item:hover .quick-view,
+.catalog-item:focus-within .quick-view {
   visibility: visible;
 }
 
-.catalog-item:hover .item-image-price {
+.catalog-item:hover .item-image-price,
+.catalog-item:focus-within .item-image-price {
   z-index: 2;
 }
 
