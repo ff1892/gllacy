@@ -580,7 +580,8 @@ img {
   z-index: 8;
 }
 
-.cart:hover .form-cart {
+.cart:hover .form-cart,
+.cart:focus-within .form-cart {
   visibility: visible;
 }
 
@@ -656,7 +657,6 @@ img {
   background: url(../img/icon/delete_button.svg) no-repeat;
   background-color: transparent;
   border: none;
-  outline: 0;
   cursor: pointer;
 }
 
@@ -1411,11 +1411,6 @@ img {
   fill: var(--basic-dark);
 }
 
-.filter-select:focus {
-  outline: 0;
-  background-color: transparent;
-}
-
 /* filter: price */
 
 .range-controls {
@@ -1462,7 +1457,6 @@ img {
   font-weight: 500;
   background-color: transparent;
   border: none;
-  outline: 0;
   cursor: pointer;
 }
 
@@ -1514,6 +1508,11 @@ img {
   height: 8px;
   background-color: var(--basic-white-80);
   border-radius: 50%;
+}
+
+.filter-input-radio:focus + label::before {
+  outline: thin dotted;
+  outline: 2px auto -webkit-focus-ring-color;
 }
 
 /* filter: checkbox */
@@ -1568,6 +1567,12 @@ img {
 
 .filter-input-checkbox:checked + label::before {
   display: none;
+}
+
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus + label::after {
+  outline: thin dotted;
+  outline: 2px auto -webkit-focus-ring-color;
 }
 
 /* filter: button */
@@ -1700,7 +1705,6 @@ img {
   background: url(../img/icon/close_button.svg) no-repeat;
   background-color: transparent;
   border: none;
-  outline: 0;
   cursor: pointer;
 }
 

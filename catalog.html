@@ -51,7 +51,8 @@
               <span class="visually-hidden">Поиск</span>
             </a>
             <form class="form form-search" action="https://echo.htmlacademy.ru" method="GET">
-              <input class="input input-search" type="search" name="site-search" placeholder="Крем-брюле">
+              <label for="site-search-form" class="visually-hidden">Поиск по сайту</label>
+              <input class="input input-search" type="search" name="site-search" id="site-search-form" placeholder="Крем-брюле">
             </form>
           </section>
           <!-- LOGIN -->
@@ -131,7 +132,7 @@
       <!-- OPEN TIME -->
       <p class="open-time page">
         с 10 до 20, ежедневно<br>
-        <a href="tel:+78124502525">8 812 450-25-25</a>
+        <a href="tel:+78124502525" aria-label="Позвонить нам по телефону">8 812 450-25-25</a>
       </p>
     </header>
     <!-- MAIN -->
@@ -157,7 +158,7 @@
             <legend>Сортировка:</legend>
             <div class="filter-wrapper wrapper-select">
               <select class="filter-select" name="group-sorting">
-                <option value="popularity">по популярности</option>
+                <option value="popularity">по популярности</option>sss
                 <option value="price-up">сначала недорогие</option>
                 <option value="price-down">сначала дорогие</option>
                 <option value="fat-content">по жирности</option>
