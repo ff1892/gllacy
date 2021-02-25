@@ -1094,18 +1094,21 @@ img {
 .map {
   margin-bottom: 18px;
   min-height: 430px;
-  /* background-image: url(../img/background/map_and_pin.png);
-  background-repeat: no-repeat;
-  background-size: cover; */
+  position: relative;
 }
 
 .map iframe {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contacts-container {
   min-height: 430px;
   display: flex;
+  background-image: url(../img/background/map_and_pin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contacts {
