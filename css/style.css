@@ -1679,12 +1679,21 @@ img {
   display: none;
   position: fixed;
   width: 477px;
-  top: 200px;
+  top: 100px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
   z-index: 10;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .feedback-form {
@@ -1745,4 +1754,50 @@ img {
   bottom: 0;
   background-color: var(--basic-black-30);
   z-index: 9;
+}
+
+.overlay-show {
+  display: block;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

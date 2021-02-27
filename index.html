@@ -106,23 +106,23 @@
         <section class="order-two">
           <h2 class="visually-hidden">Закажите два вида мороженого: это выгодно</h2>
           <ul class="order-two-list">
-            <li class="order-two-item current">
+            <li class="order-two-item order-1 current">
               <p>Крем-брюле и пломбир<br> с малиновым джемом</p>
               <a class="button button-order-two" href="#" aria-label="Добавить в корзину крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
             </li>
-            <li class="order-two-item visually-hidden">
+            <li class="order-two-item order-2">
               <p>Шоколадный пломбир<br> и лимонный сорбет</p>
               <a class="button button-order-two" href="#" aria-label="Добавить в корзину шоколадный пломбир и лимонный щербет">Давайте оба!</a>
             </li>
-            <li class="order-two-item visually-hidden">
+            <li class="order-two-item order-3">
               <p>Пломбир с помадкой<br> и клубничный щербет</p>
               <a class="button button-order-two" href="#" aria-label="Добавить в корзину пломбир с помадкой и клубничный щербет">Давайте оба!</a>
             </li>
           </ul>
           <div class="slider-controls">
-            <button class="current" type="button" aria-label="Первый слайд"></button>
-            <button type="button" aria-label="Второй слайд"></button>
-            <button type="button" aria-label="Третий слайд"></button>
+            <button class="button-1 current" type="button" aria-label="Первый слайд"></button>
+            <button class="button-2" type="button" aria-label="Второй слайд"></button>
+            <button class="button-3" type="button" aria-label="Третий слайд"></button>
           </div>
         </section>
         <!-- PROMO -->
@@ -245,7 +245,7 @@
               <a class="contacts-phone" aria-label="Позвоните нам по телефону" href="tel:+78124502525">8 812 450-25-25</a><br>
               (с 10 до 20 ежедневно)
               </p>
-              <a class="button" href="#">Форма обратной связи</a>
+              <a class="button feedback-link" href="#">Форма обратной связи</a>
             </div>
           </section>
         </div>
@@ -332,14 +332,15 @@
         <p class="feedback-headline feedback-item">Мы обязательно вам ответим!</p>
         <button class="button-close" type="button" aria-label="Закрыть форму"></button>
         <label for="feedback-name-input" class="visually-hidden">Имя, фамилия</label>
-        <input class="input feedback-item" type="text" name="feedback-name" id="feedback-name-input" placeholder="Имя Фамилия" required>
+        <input class="input feedback-item" type="text" name="feedback-name" id="feedback-name-input" placeholder="Имя Фамилия">
         <label for="feedback-email-input" class="visually-hidden">Электронная почта</label>
-        <input class="input feedback-item" type="email" name="feedback-email" id="feedback-email-input" placeholder="email@example.com" required>
+        <input class="input feedback-item" type="email" name="feedback-email" id="feedback-email-input" placeholder="email@example.com">
         <label for="feedback-text-input" class="visually-hidden">Текст обращения или вопрос</label>
-        <textarea class="input input-textarea feedback-item" name="feedback-text" id="feedback-text-input" placeholder="В свободной форме" required></textarea>
-        <button class="button button-feedback feedback-item" type="submit">Отправить</button>
+        <textarea class="input input-textarea feedback-item" name="feedback-text" id="feedback-text-input" placeholder="В свободной форме"></textarea>
+        <button type="submit" class="button button-feedback feedback-item" aria-label="Отправить обращение">Отправить</button>
       </form>
     </section>
     <div class="overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
