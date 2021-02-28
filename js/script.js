@@ -11,9 +11,9 @@ const overlay = document.querySelector(".overlay");
 
 // slider variables
 
-const buttonOne = document.querySelector('.button-1');
-const buttonTwo = document.querySelector('.button-2');
-const buttonThree = document.querySelector('.button-3');
+const buttonOne = document.querySelector(".button-1");
+const buttonTwo = document.querySelector(".button-2");
+const buttonThree = document.querySelector(".button-3");
 const background = document.querySelector(".page-body");
 const orderOne = document.querySelector(".order-1");
 const orderTwo = document.querySelector(".order-2");
