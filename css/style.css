@@ -36,6 +36,8 @@
   --basic-white: #FFFFFF;
   --basic-white-dimmed: rgba(255, 255, 255, 0.2);
   --basic-white-half: rgba(255, 255, 255, 0.5);
+  --basic-white-0: rgba(255, 255, 255, 0);
+  --basic-white-20: rgba(255, 255, 255, 0.2);
   --basic-white-40: rgba(255, 255, 255, 0.4);
   --basic-white-70: rgba(255, 255, 255, 0.7);
   --basic-white-80: rgba(255, 255, 255, 0.8);
@@ -146,7 +148,7 @@
 }
 
 .catalog-body {
-  background-image: url(../img/background/background_catalog.png);
+  background-image: linear-gradient(180deg, var(--basic-white-20) 0%, var(--basic-white-0) 100%);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -397,16 +399,20 @@ img {
   color: var(--basic-dark);
 }
 
-.catalog-navigation li:not(.current):hover {
+.catalog-navigation li:not(.current-catalog):hover {
   background-color: var(--accent-extra-dimmed);
 }
 
-.catalog-navigation li:not(.current):active {
+.catalog-navigation li:not(.current-catalog):active {
   background-color: var(--accent-dimmed);
 }
 
-.catalog-navigation .current {
+.current-catalog {
   background-color: var(--accent-light);
+}
+
+.current-catalog a {
+  color: var(--basic-white);
 }
 
 .catalog-navigation .catalog-new {
